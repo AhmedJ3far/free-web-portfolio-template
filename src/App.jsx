@@ -1,13 +1,19 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import "./App.css";
+// import { useState } from "react";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import useHeader from "./components/Header";
+import Hero from "./components/Hero";
+// import Skills from "./components/Skills";
+// import Portfolio from "./components/Portfolio";
 
 function App() {
+  // const getState = () => {};
+  const { render } = useHeader();
   return (
     <>
-      <div>
-        <Header />
-        <Footer />
+      {render}
+      <div className="container">
+        <Hero />
       </div>
     </>
   );
